@@ -16,6 +16,10 @@ public class BishopBlackTest {
 
     @Test
     public void way() {
+        var bishopBlack = new BishopBlack(Cell.C1);
+        Cell[] actual = bishopBlack.way(Cell.G5);
+        Cell[] expected = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
+        assertThat(actual, is(expected));
     }
 
     @Test
