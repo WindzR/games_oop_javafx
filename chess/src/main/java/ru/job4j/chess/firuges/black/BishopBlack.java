@@ -19,8 +19,8 @@ public class BishopBlack implements Figure {
     public Cell[] way(Cell dest) {
         if (!isDiagonal(position, dest)) {
             throw new IllegalStateException(
-                    String.format("Could not way by diagonal from %s to %s", position, dest
-                    ));
+                    String.format("Could not way by diagonal from %s to %s", position, dest)
+            );
         }
         int size = Math.abs(dest.getX() - position.getX());
         Cell[] steps = new Cell[size];

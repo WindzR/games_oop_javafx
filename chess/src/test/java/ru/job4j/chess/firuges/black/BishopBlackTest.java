@@ -22,6 +22,12 @@ public class BishopBlackTest {
         assertThat(actual, is(expected));
     }
 
+    @Test(expected = IllegalStateException.class)
+    public void wayIsNotDiagonal() {
+        var bishopBlack = new BishopBlack(Cell.C1);
+        Cell[] actual = bishopBlack.way(Cell.G6);
+    }
+
     @Test
     public void copy() {
         var bishopBlack = new BishopBlack(Cell.C1);
